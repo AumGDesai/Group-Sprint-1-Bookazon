@@ -41,9 +41,8 @@ public class User {
         cart.viewCartDetails();
     }
 
-    public void addToCart(Item item, int quantity) {
-        CartItem cartItem = new CartItem(item, quantity);  
-        cart.addItem(cartItem);
+    public void addToCart(Item item, int quantity) {  
+        cart.addItem(item, quantity);
     }
 
     public void removeFromCart(Item itemToRemove) {
