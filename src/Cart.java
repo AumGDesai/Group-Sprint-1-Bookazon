@@ -15,19 +15,15 @@ public class Cart {
         items.remove(item);
     }
     
-    public void viewCartDetails() {
-        System.out.println("Cart Details:");
-        for (CartItem item : items) {
-            System.out.println(item);
-        }
-        System.out.println("\n");
-    }
-    
     public ArrayList<CartItem> getItems() {
         return items;
     }
 
     public String toString() {
-        return "Cart Details: " + items;
+        String cartDetails = "Cart Details:\n";
+        for (CartItem item : items) {
+            cartDetails += item + "\n";
+        }
+        return cartDetails;
     }
 }

@@ -32,17 +32,6 @@ public class Order {
         this.dateShipped = date;
     }
 
-    public void printOrderDetails() {
-        System.out.println("Order Details:");
-        System.out.println("Date Created: " + dateCreated);
-        System.out.println("Date Shipped: " + dateShipped);
-        System.out.println("User: " + user.getName());
-        System.out.println("Order Status: " + orderStatus);
-        System.out.println("Shipping Address: " + shippingAddress);
-        System.out.println("Billing Address: " + billingAddress);
-        System.out.println("Order Price: $" + orderPrice);
-    }
-
     public double calculatePrice() {
         double totalPrice = 0.0;
 

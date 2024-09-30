@@ -38,7 +38,7 @@ public class User {
     }
 
     public void viewCart() {
-        cart.viewCartDetails();
+        System.out.println(cart);
     }
 
     public void addToCart(Item item, int quantity) {  
@@ -56,7 +56,7 @@ public class User {
 
     public void viewOrders() {
         for (Order order : orders) {
-            order.printOrderDetails();
+            System.out.println(order);
         }
     }
 

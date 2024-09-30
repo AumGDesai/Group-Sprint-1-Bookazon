@@ -42,13 +42,6 @@ public class Book {
         return isPaperback;
     }
 
-    public void printBookDetails() {
-        System.out.println("Title: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Year Published: " + yearPublished);
-        System.out.println("Price: $" + price);
-    }
-
     public String toString(){
         return "Title: " + title + " | Author: " + author + " | Year Published: " + yearPublished + " | Price: $" + price;
     }
