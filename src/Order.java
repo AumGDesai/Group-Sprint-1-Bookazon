@@ -54,4 +54,8 @@ public class Order {
 
         return totalPrice;
     }
+
+    public String toString() {
+        return "Order Details: " + "Date Created: " + dateCreated + " | Date Shipped: " + dateShipped + " | User: " + user.getName() + " | Order Status: " + orderStatus + " | Shipping Address: " + shippingAddress + " | Billing Address: " + billingAddress + " | Order Price: $" + orderPrice;
+    }
 }
