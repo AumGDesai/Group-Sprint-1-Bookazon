@@ -1,7 +1,7 @@
 public class Book {
-    private String title;
-    private String author;
-    private int yearPublished;
+    private final String title;
+    private final String author;
+    private final int yearPublished;
     private double price;
     private boolean isPaperback;  // true if the book is paperback, false if it is hardcover
 
@@ -38,6 +38,12 @@ public class Book {
         System.out.println("Author: " + author);
         System.out.println("Year Published: " + yearPublished);
         System.out.println("Price: $" + price);
+    }
+
+    public String toString(){
+        String toreturn = "";
+        toreturn += "Title: "+title+"| Author: "+author+" | Year Published: "+yearPublished+" | Price: "+price"$";
+        return toreturn;
     }
 
     public boolean isPriceValid() {
