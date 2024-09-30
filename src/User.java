@@ -46,9 +46,9 @@ public class User {
         cart.addItem(cartItem);
     }
 
-    public void removeFromCart(Book book) {
+    public void removeFromCart(Item itemToRemove) {
         for (CartItem item : cart.getItems()) {
-            if (item.getName().equals(book.getTitle())) {
+            if (item.getItem().equals(itemToRemove)) {
                 cart.getItems().remove(item);
                 break;
             }
