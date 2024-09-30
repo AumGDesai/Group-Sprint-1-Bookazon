@@ -61,14 +61,10 @@ public class User {
         }
     }
 
-    public void checkout() {
-        Order order = new Order(cart, this.subscription);
-        order.setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        order.setBillingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        order.setOrderStatus("Order Placed");
-        order.setDateCreated("2024-01-01");
-        order.setUserName(this.name);
+    public void checkout(String date) {
+        Order order = new Order(this, cart.getItems(), shippingAddress, billingAddress, subscription, date, "Pending");
         orders.add(order);
+        cart = new Cart();
     }
 }
 
