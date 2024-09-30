@@ -41,9 +41,7 @@ public class Book {
     }
 
     public String toString(){
-        String toreturn = "";
-        toreturn += "Title: "+title+"| Author: "+author+" | Year Published: "+yearPublished+" | Price: "+price"$";
-        return toreturn;
+        return "Title: " + title + " | Author: " + author + " | Year Published: " + yearPublished + " | Price: $" + price;
     }
 
     public boolean isPriceValid() {
