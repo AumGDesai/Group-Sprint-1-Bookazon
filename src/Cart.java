@@ -7,8 +7,8 @@ public class Cart {
         items = new ArrayList<>();
     }
     
-    public void addItem(CartItem item) {
-        items.add(item);
+    public void addItem(Item item, int quantity) {
+        items.add(new CartItem(item, quantity));
     }
 
     public void removeItem(CartItem item) {

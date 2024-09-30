@@ -3,16 +3,14 @@ import java.util.ArrayList;
 public class Order {
     private String dateCreated;
     private String dateShipped;
-    private String userName;
     private String orderStatus;
-    private Address shippingAddress;
-    private Address billingAddress;
+    private User user;
     private ArrayList<CartItem> items;
     private double orderPrice;
 
-    public Order(Cart cart, String subscription) {
-        this.items = cart.getItems();
-        this.orderPrice = calculatePrice(subscription);
+    public Order(User user) {
+        this.items = user.getCart().getItems();
+        this.orderPrice = calculatePrice();
     }
 
     public void setOrderStatus(String status) {
@@ -42,20 +40,18 @@ public class Order {
         System.out.println("Order Price: $" + orderPrice);
     }
 
-    public double calculatePrice(String subscription) {
+    public double calculatePrice() {
         double totalPrice = 0.0;
 
         for (CartItem item : items) {
             totalPrice += item.getTotalPrice();
         }
 
+	return totalPrice * user.getSubscription().getDiscount();
+
         if (subscription == "gold") {
             totalPrice *= 0.15; // 15% discount for prime members
-        } else if (subscription == "platinum") {
-            totalPrice *= 0.10; // 10% discount for platinum members
-        } else if (subscription == "silver") {
-            totalPrice *= 0.05; // 5% discount for silver members
-        } 
+        } else if (subscription == "
 
         return totalPrice;
     }
