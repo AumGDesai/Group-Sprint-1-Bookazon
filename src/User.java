@@ -8,11 +8,21 @@ public class User {
     private ArrayList<Order> orders;
     private Address shippingAddress;
     private Address billingAddress;
+
     public User(String name, String subscription) {
         this.name = name;
         this.subscription = subscription;  // normal, gold, platinum, silver membership
         this.cart = new Cart();
         this.orders = new ArrayList<>();
+    }
+
+    public User(String name, String subscription, Address ship, Address bill) {
+        this.name = name;
+        this.subscription = subscription;  // normal, gold, platinum, silver membership
+        this.cart = new Cart();
+        this.orders = new ArrayList<>();
+        this.shippingAddress = ship;
+        this.billingAddress = bill;
     }
 
     public String getName() {
