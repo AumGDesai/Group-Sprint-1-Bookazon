@@ -1,5 +1,4 @@
 public class Book extends Item {
-    private String title;
     private String author;
     private int yearPublished;
     private boolean isPaperback;  // true if the book is paperback, false if it is hardcover
