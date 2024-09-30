@@ -30,4 +30,8 @@ public class CartItem {
     public double getTotalPrice() {
         return getPrice() * quantity;
     }
+    
+    public String toString() {
+        return item.toString() + " | Quantity: " + quantity + " | Total Price: $" + getTotalPrice();
+    }
 }
