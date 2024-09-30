@@ -19,6 +19,18 @@ public class User {
         return name;
     }
 
+    public Cart getCart() {
+        return cart;
+    }
+
+    public Address getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public Address getBillingAddress() {
+        return billingAddress;
+    }
+
     public String getSubscription() {
         return subscription;
     }
@@ -51,12 +63,7 @@ public class User {
     }
 
     public void checkout() {
-        Order order = new Order(cart, this.subscription);
-        order.setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        order.setBillingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        order.setOrderStatus("Order Placed");
-        order.setDateCreated("2024-01-01");
-        order.setUserName(this.name);
+        Order order = new Order(this, "2024-01-01");
         orders.add(order);
     }
 }

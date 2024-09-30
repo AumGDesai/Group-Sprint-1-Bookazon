@@ -10,9 +10,15 @@ public class Order {
     private ArrayList<CartItem> items;
     private double orderPrice;
 
-    public Order(Cart cart, String subscription) {
-        this.items = cart.getItems();
-        this.orderPrice = calculatePrice(subscription);
+    public Order(User user, String date) {
+        this.items = user.getCart().getItems();
+        this.orderPrice = calculatePrice(user.getSubscription());
+        this.shippingAddress = user.getShippingAddress();
+        this.billingAddress = user.getBillingAddress();
+        this.dateCreated = date;
+        this.dateShipped = "N/A";
+        this.userName = user.getName();
+        this.orderStatus = "Pending";
     }
 
     public void setOrderStatus(String status) {
