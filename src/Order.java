@@ -3,21 +3,21 @@ import java.util.ArrayList;
 public class Order {
     private String dateCreated;
     private String dateShipped;
-    private String userName;
+    private User user;
     private String orderStatus;
     private Address shippingAddress;
     private Address billingAddress;
-    private ArrayList<CartItem> items;
+    private ArrayList<Item> items;
     private double orderPrice;
 
-    public Order(User user, String date) {
-        this.items = user.getCart().getItems();
-        this.orderPrice = calculatePrice(user.getSubscription());
-        this.shippingAddress = user.getShippingAddress();
-        this.billingAddress = user.getBillingAddress();
+    public Order(User user, ArrayList<Item> items, Subscription subscription, Address shippingAddress, Address billingAddress, String date, String status) {
+        this.user = user;
+        this.items = items;
+        this.orderPrice = calculatePrice(subscription);
+        this.shippingAddress = shippingAddress;
+        this.billingAddress = billingAddress;
         this.dateCreated = date;
         this.dateShipped = "N/A";
-        this.userName = user.getName();
         this.orderStatus = "Pending";
     }
 
@@ -33,15 +33,11 @@ public class Order {
         this.dateShipped = date;
     }
 
-    public void setUserName(String name) {
-        this.userName = name;
-    }
-
     public void printOrderDetails() {
         System.out.println("Order Details:");
         System.out.println("Date Created: " + dateCreated);
         System.out.println("Date Shipped: " + dateShipped);
-        System.out.println("User Name: " + userName);
+        System.out.println("User: " + user.getName());
         System.out.println("Order Status: " + orderStatus);
         System.out.println("Shipping Address: " + shippingAddress);
         System.out.println("Billing Address: " + billingAddress);
