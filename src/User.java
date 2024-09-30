@@ -6,19 +6,8 @@ public class User {
     private String subscription;
     private Cart cart;
     private ArrayList<Order> orders;
-    private String shippingAddressLine1;
-    private String shippingAddressLine2;
-    private String shippingAddressCity;
-    private String shippingAddressState;
-    private String shippingAddressZip;
-    private String shippingAddressCountry;
-    private String billingAddressLine1;
-    private String billingAddressLine2;
-    private String billingAddressCity;
-    private String billingAddressState;
-    private String billingAddressZip;
-    private String billingAddressCountry;
-
+    private Address shippingAddress;
+    private Address billingAddress;
     public User(String name, String subscription) {
         this.name = name;
         this.subscription = subscription;  // normal, gold, platinum, silver membership
@@ -40,24 +29,6 @@ public class User {
 
     public void viewCart() {
         cart.viewCartDetails();
-    }
-
-    public void setShippingAddress(String line1, String line2, String city, String state, String zip, String country) {
-        this.shippingAddressLine1 = line1;
-        this.shippingAddressLine2 = line2;
-        this.shippingAddressCity = city;
-        this.shippingAddressState = state;
-        this.shippingAddressZip = zip;
-        this.shippingAddressCountry = country;
-    }
-
-    public void setBillingAddress(String line1, String line2, String city, String state, String zip, String country) {
-        this.billingAddressLine1 = line1;
-        this.billingAddressLine2 = line2;
-        this.billingAddressCity = city;
-        this.billingAddressState = state;
-        this.billingAddressZip = zip;
-        this.billingAddressCountry = country;
     }
 
     public void addToCart(Book book, int quantity) {
