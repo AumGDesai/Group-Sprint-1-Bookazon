@@ -45,6 +45,6 @@ public class Order {
     }
 
     public String toString() {
-        return "Order Details: " + "Date Created: " + dateCreated + " | Date Shipped: " + dateShipped + " | User: " + user.getName() + " | Order Status: " + orderStatus + " | Shipping Address: " + shippingAddress + " | Billing Address: " + billingAddress + " | Order Price: $" + orderPrice;
+        return "Order Details: " + "Date Created: " + dateCreated + " | Date Shipped: " + dateShipped + " | User: " + user.getName() + " | Order Status: " + orderStatus + " | Shipping Address: " + shippingAddress + " | Billing Address: " + billingAddress + " | Order Price: $" + orderPrice + " | Subscription: " + user.getSubscription() + " | Discount: " + user.getSubscription().getDiscount();
     }
 }
