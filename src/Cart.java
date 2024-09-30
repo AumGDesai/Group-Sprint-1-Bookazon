@@ -26,4 +26,8 @@ public class Cart {
     public ArrayList<CartItem> getItems() {
         return items;
     }
+
+    public String toString() {
+        return "Cart Details: " + items;
+    }
 }
