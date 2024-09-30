@@ -3,16 +3,21 @@ import java.util.ArrayList;
 public class Order {
     private String dateCreated;
     private String dateShipped;
-    private String userName;
+    private User user;
     private String orderStatus;
     private Address shippingAddress;
     private Address billingAddress;
     private ArrayList<CartItem> items;
     private double orderPrice;
 
-    public Order(Cart cart, String subscription) {
-        this.items = cart.getItems();
-        this.orderPrice = calculatePrice(subscription);
+    public Order(User user, ArrayList<CartItem> items, Address shipping, Address billing, Subscription subscription, String date, String status) {
+        this.user = user;
+        this.shippingAddress = shipping;
+        this.billingAddress = billing;
+        this.items = items;
+        this.orderPrice = calculatePrice(user.getSubscription());
+        this.dateCreated = date;
+        this.orderStatus = status;
     }
 
     public void setOrderStatus(String status) {
