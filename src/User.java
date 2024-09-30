@@ -3,20 +3,20 @@ import java.util.ArrayList;
 
 public class User {
     private String name;
-    private String subscription;
+    private Subscription subscription;
     private Cart cart;
     private ArrayList<Order> orders;
     private Address shippingAddress;
     private Address billingAddress;
 
-    public User(String name, String subscription) {
+    public User(String name, Subscription subscription) {
         this.name = name;
         this.subscription = subscription;  // normal, gold, platinum, silver membership
         this.cart = new Cart();
         this.orders = new ArrayList<>();
     }
 
-    public User(String name, String subscription, Address ship, Address bill) {
+    public User(String name, Subscription subscription, Address ship, Address bill) {
         this.name = name;
         this.subscription = subscription;  // normal, gold, platinum, silver membership
         this.cart = new Cart();
@@ -29,11 +29,11 @@ public class User {
         return name;
     }
 
-    public String getSubscription() {
+    public Subscription getSubscription() {
         return subscription;
     }
 
-    public void setSubscription(String role) {
+    public void setSubscription(Subscription role) {
         this.subscription = role;
     }
 
