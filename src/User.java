@@ -25,6 +25,22 @@ public class User {
         this.billingAddress = bill;
     }
 
+    public Address getShippingAddress() {
+        return shippingAddress;
+    }
+
+    public void setShippingAddress(Address shippingAddress) {
+        this.shippingAddress = shippingAddress;
+    }
+
+    public Address getBillingAddress() {
+        return billingAddress;
+    }
+
+    public void setBillingAddress(Address billingAddress) {
+        this.billingAddress = billingAddress;
+    }
+
     public String getName() {
         return name;
     }
@@ -60,10 +76,11 @@ public class User {
         }
     }
 
-    public void checkout(String date) {
+    public void checkout() {
+        String date = java.time.LocalDate.now().toString();
         Order order = new Order(this, cart.getItems(), shippingAddress, billingAddress, subscription, date, "Pending");
         orders.add(order);
-        cart = new Cart();
+        cart.clear();
     }
 
     public String toString() {

@@ -19,6 +19,10 @@ public class Cart {
         return items;
     }
 
+    public void clear() {
+        items.clear();
+    }
+
     public String toString() {
         String cartDetails = "Cart Details:\n";
         for (CartItem item : items) {

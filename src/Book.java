@@ -1,4 +1,4 @@
-public class Book {
+public class Book implements Item {
     private String title;
     private String author;
     private int yearPublished;
