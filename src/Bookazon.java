@@ -27,7 +27,7 @@ public class Bookazon {
 
     public void viewUsers() {
         for (User user : users) {
-            System.out.println(user.getName() + " - Role: " + user.getSubscription());
+            System.out.println(user);
         }
     }
 

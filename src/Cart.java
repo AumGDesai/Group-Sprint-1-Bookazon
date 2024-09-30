@@ -18,7 +18,7 @@ public class Cart {
     public void viewCartDetails() {
         System.out.println("Cart Details:");
         for (CartItem item : items) {
-            System.out.println(item.getName() + " - Quantity: " + item.getQuantity());
+            System.out.println(item);
         }
         System.out.println("\n");
     }
