@@ -66,6 +66,10 @@ public class User {
         orders.add(order);
         cart = new Cart();
     }
+
+    public String toString() {
+        return name + " - Role: " + subscription;
+    }
 }
 
 
