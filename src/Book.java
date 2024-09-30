@@ -1,4 +1,4 @@
-public class Book {
+public class Book implements Item {
     private String title;
     private String author;
     private int yearPublished;
@@ -40,13 +40,6 @@ public class Book {
 
     public boolean isPaperback() {
         return isPaperback;
-    }
-
-    public void printBookDetails() {
-        System.out.println("Title: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Year Published: " + yearPublished);
-        System.out.println("Price: $" + price);
     }
 
     public String toString(){
