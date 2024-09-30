@@ -1,4 +1,5 @@
 public class Book extends Item {
+    private String title;
     private String author;
     private int yearPublished;
     private boolean isPaperback;  // true if the book is paperback, false if it is hardcover
@@ -23,13 +24,6 @@ public class Book extends Item {
 
     public boolean isPaperback() {
         return isPaperback;
-    }
-
-    public void printBookDetails() {
-        System.out.println("Title: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Year Published: " + yearPublished);
-        System.out.println("Price: $" + price);
     }
 
     public String toString(){
