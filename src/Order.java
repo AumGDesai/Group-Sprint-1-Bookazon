@@ -15,7 +15,7 @@ public class Order {
         this.shippingAddress = shipping;
         this.billingAddress = billing;
         this.items = items;
-        this.orderPrice = calculatePrice(user.getSubscription());
+        this.orderPrice = calculatePrice();
         this.dateCreated = date;
         this.orderStatus = status;
     }
@@ -43,14 +43,14 @@ public class Order {
         System.out.println("Order Price: $" + orderPrice);
     }
 
-    public double calculatePrice(Subscription subscription) {
+    public double calculatePrice() {
         double totalPrice = 0.0;
 
         for (CartItem item : items) {
             totalPrice += item.getTotalPrice();
         }
 
-        totalPrice = subscription.getDiscount() * totalPrice;
+        totalPrice = user.getSubscription().getDiscount() * totalPrice;
 
         return totalPrice;
     }
