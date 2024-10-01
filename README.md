@@ -1,10 +1,8 @@
 Welcome to "Itemazon" — The Future of Shopping, Reinvented
 
 Founders: BitWise CacheFlow
-Repo Manager - Aum Desai
-Backlog Manager - Jon Mears
-Andy Lipton
-Oliver Thompson
+
+Repo Manager - Aum Desai, Backlog Manager - Jon Mears, Andy Lipton, Oliver Thompson
 
 In the beginning, there was "Bookazon" — a repository abandoned, left to collect dust in the vast recesses of GitHub. Its potential? Unrealized. Its vision? Narrow. Whoever created it clearly didn’t foresee the future. They didn’t think beyond books. But we did. We saw an opportunity to evolve, to disrupt, to bring about something far grander than what the original creators could ever have imagined.
 
