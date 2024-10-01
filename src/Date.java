@@ -62,5 +62,9 @@ public class Date {
 			this.day = 1;
 		}
 	}
+
+	public String toString() {
+		return this.year + "-" + this.month + "-" + this.day;
+	}
 }
 		
