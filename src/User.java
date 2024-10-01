@@ -77,7 +77,7 @@ public class User {
     }
 
     public void checkout() {
-        LocalDate d = java.time.LocalDate.now();
+        java.time.LocalDate d = java.time.LocalDate.now();
 	Date date = new Date(d.getYear(), d.getMonth(), d.getDayOfMonth()); 
         Order order = new Order(this, cart.getItems(), shippingAddress, billingAddress, subscription, date, "Pending");
         orders.add(order);
